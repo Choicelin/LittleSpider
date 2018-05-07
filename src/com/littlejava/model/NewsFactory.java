@@ -28,11 +28,15 @@ public class NewsFactory {
                     newsReader = new JsonNewsReader(file);
                 }
 
-                if (newsReader != null) {
-                    newsList.add(newsReader.readNews());
-                }
+                News news = newsReader.readNews();
+                newsList.add(news);
             }
         }
+
+        NewsWithRelated newsWithRelated = new NewsWithRelated("Java训练营", "Java训练营已经第三课了！");
+        newsWithRelated.addRelated("4.11", "Java训练营开营！！！");
+        newsWithRelated.addRelated("4.17", "Java训练营第二课");
+        newsList.add(newsWithRelated);
         return newsList;
     }
 }

@@ -3,10 +3,8 @@ package com.littlejava.model;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
 
 public class TextNewsReader extends NewsReader {
-
     public TextNewsReader(File file) {
         super(file);
     }
@@ -23,6 +21,7 @@ public class TextNewsReader extends NewsReader {
         } catch (java.io.IOException e) {
             System.out.println("新闻读取出错");
         }
+
         return news;
     }
 }
